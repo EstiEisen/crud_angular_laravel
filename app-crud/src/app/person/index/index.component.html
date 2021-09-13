@@ -1,0 +1,30 @@
+<section>
+    <h4>Details</h4>
+    <div class="d-flex justify-content-between">
+        <input type="text" class="form-control" placeholder="Search person's details" [(ngModel)]="search_query"
+            (onKeyUp)="search()">
+        <a routerLink="/person/create" class="btn btn-success">add+</a>
+    </div>
+
+    <br>
+
+    <table class="table ">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th width="220px">Action</th>
+        </tr>
+        <tr *ngFor="let person of search()">
+            <td>{{ person.name }}</td>
+            <td>{{ person.email }}</td>
+            <td>{{ person.phone }}</td>
+            <td>
+
+                <a href="#" [routerLink]="['/person/', 'edit', person.id  ]" class="btn btn-primary ">Edit</a>
+                <button type="button" (click)="deletePerson(person.id)" class="btn btn-danger ">Delete</button>
+
+            </td>
+        </tr>
+    </table>
+</section>
