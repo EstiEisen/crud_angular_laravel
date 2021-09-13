@@ -2,7 +2,9 @@ installation- crud app angular+laravel
 
 git clone https://github.com/EstiEisen/crud_angular_laravel.git
 
+
 the backend-laravel
+
 
 cd laravel/laravel-7-crud-app
 
@@ -20,7 +22,9 @@ php artisan migrate
 
 php artisan serve 
 
+
 the frontEnd-angular
+
 
 cd app-crud
 
